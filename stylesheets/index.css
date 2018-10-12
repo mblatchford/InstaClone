@@ -10,5 +10,44 @@ html,body{
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%
+    width: 100%;
+    /* display: flex; */
+}
+
+/* picture frame resize */
+.thumbnail-item{
+    /* control image size */
+    width:  150px;
+    height: 30%;
+    margin-bottom: 20px;
+    
+    /* text align can be an alternative to flex box for img/text */
+    text-align: center;
+
+}
+
+.thumbnail-item > img {
+    /* img will adapt to parent */
+    /* pick width or height not both (preserves aspect ratio)*/
+    max-height: 100%;
+    max-width: 100%;
+
+}
+
+.thumbnail-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.picture-frame {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.picture-frame > img {
+    max-width: 100%;
+    max-height: 100%;
 }
