@@ -40,14 +40,30 @@ html,body{
     justify-content: space-around;
 }
 
-.picture-frame {
+.galleryView {
     width: 90%;
     margin: 0 auto;
     text-align: center;
 
 }
 
-.picture-frame > img {
+.galleryView > img {
     max-width: 100%;
     max-height: 100%;
+}
+
+
+.modal {
+/* cover existing page with large pic,
+pair with an opaque grey background,
+make sure contents are centered */
+position: absolute;
+left:0;
+right:0;
+top:0;
+
+width:100%;
+height:100%;
+
+
 }
