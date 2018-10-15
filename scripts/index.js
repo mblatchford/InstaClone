@@ -13,7 +13,7 @@ const IMAGES = [
 
 const thumbnailContainer = document.querySelector('[data-container]')
 const galleryElement = document.querySelector('[data-largeOutput]');
-
+const modalElement = document.querySelector('[data-modal]');
 
 function createImage(imageData) {
     const newImage = document.createElement('img');
@@ -32,6 +32,8 @@ function createImage(imageData) {
         // I can now set the output image's src
         // to event.target.src!
         galleryElement.src =  event.target.src;
+        // modal is hidden by default
+        modalElement.classList.remove('modal-hidden');
     });
     return newImage;
 }
@@ -50,4 +52,16 @@ IMAGES.forEach(function (imageData) {
     let testThumb = createImgContainer(imageData);
     // then append that thumbnail to the page.
     thumbnailContainer.appendChild(testThumb);
+});
+
+// add class of modal-hidden back onto div 
+function toggleModal(event){
+    modalElement.classList.toggle('modal-hidden');
+}
+// on user click of modal view, hide reverting back to thumbnails
+modalElement.addEventListener('click', toggleModal);
+window.addEventListener('keydown', (event) => {
+    if (event.keyCode === 27){
+        modalElement.classList.add('modal-hidden');
+    }
 });
