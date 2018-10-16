@@ -81,7 +81,7 @@ align-items: center;
 .header {
     display: flex;
     margin: 20px 20px;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     /* border: 1px solid rgb(230, 230, 230); */
     width: 100%;
@@ -111,13 +111,7 @@ button {
 
 .header img {
     margin: 5px 35px 0 10px;
-    width: 110px;
+    width: 175px;
     height: 100%;
 }
 
-.header img:first-of-type {
-    padding: 0;
-    width: 25px;
-    outline: 1px solid red;
-    /* height: 50px; */
-}
